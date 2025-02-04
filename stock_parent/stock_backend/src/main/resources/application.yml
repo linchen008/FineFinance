@@ -1,0 +1,35 @@
+# web定义 {#web定义 }
+server:
+  port: 8091
+
+spring:
+  # Configuring mysql data source
+  datasource:
+      url: jdbc:mysql://localhost:3306/stock_db?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        initial-size: 6 # 初始化时建立物理连接的个数。初始化发生在显示调用 init 方法，或者第一次 getConnection 时
+        min-idle: 2 # 最小连接池数量
+        max-active: 20 # 最大连接池数量
+        max-wait: 60000 # 获取连接时最大等待时间，单位毫秒。
+
+# configure mybatis
+mybatis:
+  type-aliases-package: com.itheima.stock.pojo.entity # Specify the package name of the entity class
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰映射
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # Print sql statement
+
+# configure pagehelper
+pagehelper:
+  helper-dialect: mysql #指定分页数据库类型（方言）
+  reasonable: true #合理查询超过最大页，则查询最后一页
+
+logging:
+  level:
+    root: DEBUG
