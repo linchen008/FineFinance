@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
  * @Date 2021/12/24
  * @Description 登录后响应前端的vo
  */
+//@ApiModel(value = "com-itheima-stock-vo-resp-LoginRespVo")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,18 +23,22 @@ public class LoginRespVo {
      * 将Long类型数字进行json格式转化时，转成String格式类型
      */
     @JsonSerialize(using = ToStringSerializer.class)
+//    @ApiModelProperty(value = "user id")
     private Long id;
     /**
      * 电话
      */
+//    @ApiModelProperty(value = "phone number")
     private String phone;
     /**
      * 用户名
      */
+//    @ApiModelProperty(value = "username")
     private String username;
     /**
      * 昵称
      */
+//    @ApiModelProperty(value = "nickname")
     private String nickName;
 
 }

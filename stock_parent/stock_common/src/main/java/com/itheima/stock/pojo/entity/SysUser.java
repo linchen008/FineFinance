@@ -1,47 +1,57 @@
 package com.itheima.stock.pojo.entity;
 
-import java.util.Date;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+
+import java.util.Date;
 
 /**
  * 用户表
  * @TableName sys_user
  */
+@Schema(description = "User Entity")
 @Data
 public class SysUser {
     /**
      * 用户id
      */
+//    @ApiModelProperty(value = "user id")
     private Long id;
 
     /**
      * 账户
      */
+//    @ApiModelProperty(value = "username")
     private String username;
 
     /**
      * 用户密码密文
      */
+//    @ApiModelProperty(value = "password")
     private String password;
 
     /**
      * 手机号码
      */
+//    @ApiModelProperty(value = "phone number")
     private String phone;
 
     /**
      * 真实名称
      */
+//    @ApiModelProperty(value = "real name")
     private String realName;
 
     /**
      * 昵称
      */
+//    @ApiModelProperty(value = "nickname")
     private String nickName;
 
     /**
      * 邮箱(唯一)
      */
+//    @ApiModelProperty(value = "email")
     private String email;
 
     /**

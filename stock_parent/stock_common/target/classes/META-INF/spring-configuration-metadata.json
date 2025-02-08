@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "stock",
+      "type": "com.itheima.stock.pojo.vo.StockInfoConfig",
+      "sourceType": "com.itheima.stock.pojo.vo.StockInfoConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "stock.inner",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.itheima.stock.pojo.vo.StockInfoConfig"
+    },
+    {
+      "name": "stock.outer",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.itheima.stock.pojo.vo.StockInfoConfig"
+    }
+  ],
+  "hints": []
+}

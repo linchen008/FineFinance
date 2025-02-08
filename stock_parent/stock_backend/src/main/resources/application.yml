@@ -3,6 +3,8 @@ server:
   port: 8091
 
 spring:
+  profiles:
+    active: cache, stock
   # Configuring mysql data source
   datasource:
       url: jdbc:mysql://localhost:3306/stock_db?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
@@ -16,6 +18,9 @@ spring:
         min-idle: 2 # 最小连接池数量
         max-active: 20 # 最大连接池数量
         max-wait: 60000 # 获取连接时最大等待时间，单位毫秒。
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 # configure mybatis
 mybatis:
@@ -30,6 +35,27 @@ pagehelper:
   helper-dialect: mysql #指定分页数据库类型（方言）
   reasonable: true #合理查询超过最大页，则查询最后一页
 
+# configure swagger ui path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+
+  group-configs:
+    - group: 'user module'
+      paths-to-match: '/**'
+      packages-to-scan: com.itheima.stock.controller
+
+# configure knife4j
+knife4j:
+  enable: true
+  setting:
+    language: en
+
+# configure logging
 logging:
   level:
     root: DEBUG
+    com.github.xiaoymin: DEBUG

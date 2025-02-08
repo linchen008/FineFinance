@@ -1,8 +1,9 @@
 package com.itheima.stock.pojo.entity;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 股票板块详情信息表

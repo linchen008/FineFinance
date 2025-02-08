@@ -1,6 +1,11 @@
 package com.itheima.stock.mapper;
 
+import com.itheima.stock.pojo.domain.StockBlockDomain;
 import com.itheima.stock.pojo.entity.StockBlockRtInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
 
 /**
 * @author Tommy
@@ -22,4 +27,10 @@ public interface StockBlockRtInfoMapper {
 
     int updateByPrimaryKey(StockBlockRtInfo record);
 
+    /**
+     * 查询所有板块信息
+     * @param timePoint 最新日期
+     * @return List<StockBlockDomain>
+     */
+    List<StockBlockDomain> sectorAllLimit(@Param("timePoint") Date timePoint);
 }
