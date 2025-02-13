@@ -48,7 +48,9 @@
         <sharding-jdbc.version>5.4.1</sharding-jdbc.version>
 
         <jjwt.version>0.11.5</jjwt.version>
-        <easyExcel.version>3.3.2</easyExcel.version>
+        <fastexcel.version>1.1.0</fastexcel.version>
+
+
         <xxl-job-core.version>2.4.0</xxl-job-core.version>
 
         <joda-time.version>2.13.0</joda-time.version>
@@ -131,9 +133,9 @@
 
             <!-- 导出 excel -->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>easyexcel</artifactId>
-                <version>${easyExcel.version}</version>
+                <groupId>cn.idev.excel</groupId>
+                <artifactId>fastexcel</artifactId>
+                <version>${fastexcel.version}</version>
             </dependency>
 
             <!--xxl-job定义任务框架支持-->

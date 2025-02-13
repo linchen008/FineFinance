@@ -44,11 +44,12 @@ springdoc:
     path: /v3/api-docs
 
   group-configs:
-    - group: 'user module'
+    - group: 'stock-backend API'
       paths-to-match: '/**'
       packages-to-scan: com.itheima.stock.controller
 
 # configure knife4j
+# uri: http://localhost:8091/doc.html
 knife4j:
   enable: true
   setting:

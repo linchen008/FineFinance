@@ -1,6 +1,7 @@
 package com.itheima.stock.vo.resp;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.io.Serializable;
  * @JsonInclude 保证序列化json的时候,如果是null的对象,key也会消失
  * @param <T>
  */
+@Schema(name = "R", description = "返回数据类")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class R<T> implements Serializable {
     @Serial
